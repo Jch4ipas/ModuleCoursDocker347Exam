@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "New Container",
+    "isGoingToDisplay": true,
+    "durationDisplay": "30",
+    "gridHeight": 4,
+    "gridWidth": 6,
+    "boxes": [
+      {
+        "id": 1,
+        "width": 5,
+        "height": "4",
+        "x": 1,
+        "y": 1,
+        "type": ""
+      },
+      {
+        "id": 2,
+        "width": 1,
+        "height": 1,
+        "x": 6,
+        "y": 1,
+        "type": "Clock"
+      },
+      {
+        "id": 3,
+        "width": 1,
+        "height": 3,
+        "x": 6,
+        "y": 2,
+        "type": ""
+      }
+    ]
+  }
+]
