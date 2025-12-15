@@ -15,9 +15,9 @@ Il montre comment construire une image, lancer un conteneur et utiliser un fichi
  
 ## Construire l’image Docker
 ### En dev
-`docker build --target dev -f ./Dockerfile -t projetdocker:1.0-dev app/`
+`docker build --target dev -f ./Dockerfile -t jchaipas/projetdocker:1.0-dev app/`
 ### En prod
-`docker build --target prod -f ./Dockerfile -t projetdocker:1.0-prod app/`
+`docker build --target prod -f ./Dockerfile -t jchaipas/projetdocker:1.0-prod app/`
  
 ## Lancer l'application
 ### En dev avec docker-compose
@@ -27,7 +27,7 @@ mettez le nom et tag de l'image
 
 ### En prod sans docker-compose
 
-`docker run -p 3000:3000 -d projetdocker:1.0-prod`
+`docker run -p 3000:3000 -d jchaipas/projetdocker:1.0-prod`
  
 L’application sera disponible sur : http://localhost:3000
  
