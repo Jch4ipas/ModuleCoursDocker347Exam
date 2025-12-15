@@ -56,8 +56,8 @@ Utilisateur non-root + image plus légère.<br>
 
 ## Test du rechargement automatique
 Vérifie que: 
-DEV -> recharge automatiquement le code
-PROD -> nécessite un redémarrage du conteneur
+- DEV -> recharge automatiquement le code
+- PROD -> nécessite un redémarrage du conteneur
 
 ### Etapes DEV
 `docker-compose up -d`
