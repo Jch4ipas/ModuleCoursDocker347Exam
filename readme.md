@@ -53,3 +53,50 @@ Démarré avec node server.js → optimisé, sans rechargement automatique.<br>
 Source maps désactivés → plus sécurisé et plus rapide.<br>
 Ne contient que les dépendances nécessaires (prod).<br>
 Utilisateur non-root + image plus légère.<br>
+
+## Test du rechargement automatique
+Vérifie que: 
+> DEV -> recharge automatiquement le code
+> PROD -> nécessite un redémarrage du conteneur
+
+### Etapes DEV
+`docker-compose up -d`
+1. Ouvrir http://localhost:3000
+2. Modifie un ficher dans app/ (ex: message dans server.js)
+3. Sauvegarde le fichier
+
+#### Resultat attendu (DEV)
+- Le conteneur redémarre automatiquement (nodemon)
+- Le changement est visible sans relancer Docker
+
+### Etapes PROD
+`docker run -p 3000:3000 -d jchaipas/projetdocker:1.0-prod`
+1. Modifie le même fichier source
+2. Recharge la page
+
+#### Resultat attendu (PROD)
+- Aucun changement visible
+- Le conteneur doit être redémarré pour appliquer les modifications
+
+## Test de dépendances installées
+Verifier que:
+- DEV contient les devDependencies
+- PROD ne contient que les dépendances de production
+
+### Commandes
+DEV:
+`docker run --rm -it jchaipas/projetdocker:1.0-dev sh`
+
+PROD:
+`docker run --rm -it jchaipas/projetdocker:1.0-prod sh`
+
+### Vérifications
+#### Exemple: nodemon
+`npm list nodemon`
+
+DEV:
+nodemon présent
+
+PROD:
+nodemon absent
+
