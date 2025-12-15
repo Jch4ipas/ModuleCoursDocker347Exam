@@ -50,7 +50,6 @@ Contient des outils de dev (bash, git…).<br>
 
 Environnement PROD :<br>
 Démarré avec node server.js → optimisé, sans rechargement automatique.<br>
-Source maps désactivés → plus sécurisé et plus rapide.<br>
 Ne contient que les dépendances nécessaires (prod).<br>
 Utilisateur non-root + image plus légère.<br>
 
