@@ -1,6 +1,6 @@
 services:
   dashboard:
-    image: projetdocker:1.0-dev
+    image: jchaipas/projetdocker:1.0-dev
     ports:
       - 3000:3000
     volumes:
