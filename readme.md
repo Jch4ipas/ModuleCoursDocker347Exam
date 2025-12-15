@@ -42,14 +42,14 @@ docker rm name-container
 ```
 
 ### Différences d'environnement
-Environnement DEV:\n
-Utilise Nodemon / npm run dev → rechargement automatique.\n
-Source maps activés → tu vois les vraies lignes de ton code en cas d’erreur.\n
-Dépendances installées entièrement (avec devDependencies).\n
-Contient des outils de dev (bash, git…).\n
+Environnement DEV:<br>
+Utilise Nodemon / npm run dev → rechargement automatique.<br>
+Source maps activés → tu vois les vraies lignes de ton code en cas d’erreur.<br>
+Dépendances installées entièrement (avec devDependencies).<br>
+Contient des outils de dev (bash, git…).<br>
 
-Environnement PROD :\n
-Démarré avec node server.js → optimisé, sans rechargement automatique.\n
-Source maps désactivés → plus sécurisé et plus rapide.\n
-Ne contient que les dépendances nécessaires (prod).\n
-Utilisateur non-root + image plus légère.\n
+Environnement PROD :<br>
+Démarré avec node server.js → optimisé, sans rechargement automatique.<br>
+Source maps désactivés → plus sécurisé et plus rapide.<br>
+Ne contient que les dépendances nécessaires (prod).<br>
+Utilisateur non-root + image plus légère.<br>
